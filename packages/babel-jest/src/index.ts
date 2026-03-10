@@ -66,6 +66,7 @@ function addIstanbulInstrumentation(
           // files outside `cwd` will not be instrumented
           cwd: transformOptions.config.cwd,
           exclude: [],
+          extension: [path().extname(copiedBabelOptions.filename)],
         },
       ],
     ];
